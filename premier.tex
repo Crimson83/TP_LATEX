@@ -7,11 +7,14 @@
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
 \usepackage{graphbox}
+\usepackage{graphicx}
 \usepackage[dvipsnames,svgnames]{xcolor}
 \usepackage{microtype}
 \usepackage{hyperref}
 \usepackage{lipsum}
-\usepackage{showkeys} \hypersetup{colorlinks=true,linkcolor=Brown,breaklinks=true,bookmarks
+\usepackage{showkeys}
+\usepackage{xspace}
+\usepackage{multicol} \hypersetup{colorlinks=true,linkcolor=Brown,breaklinks=true,bookmarks
 =true,pdfstartview=XYZ}
 \title{Équations différentielles}
 \author{Gloria Faccanoni}
@@ -31,16 +34,49 @@
 \section{Exercices}
 \lipsum[6]
 comme indiqué dans~\ref{rapp} alors test.
+\section{Meilleur Jeu de l'annee 2022}
+\marginpar{\fbox{\includegraphics[width=\marginparwidth]{Sonic}}}
 Google.\footnote{\href{http://www.google.com}{Google}}
-
+on voit à l'hérisson suivant~\ref{fig.Sonic} que il est très rapide
+\section{Figure}
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{Sonic}
+\caption{The Fastest Thing Alive}\label{fig.Sonic}
+\end{figure}
+\lipsum[2]
 \begin{enumerate}
 \item pain
 \item lait
 \item farine
 \end{enumerate}
-
+\section{description}
 \begin{description}
 \item[Titre:]Edition scientifique avec \LaTeX
 \item[Duree:]12h
 \end{description}
+\section{Tableau}
+\begin{tabular}{|c|p{1cm}|r|}
+\hline
+1 & 2 & 3 \\
+\hline
+ouh & hi & ouh \\
+\hline
+\end{tabular}
+\section{Multicols}
+\lipsum[1]
+\begin{multicols}{2}
+\lipsum[2]
+\end{multicols}
+\section{New Command}
+\newcommand{\SONIC}{Hyper Super c'est Sonic\xspace}
+\SONIC .
+\newcommand{\guillemets}[1]{\og #1\fg}
+\guillemets{\SONIC}
+\newcommand{\nompropre}[2]{#1\xspace\scshape #2\xspace}
+\nompropre{valentin}{fraselle}
+\newenvironment{citationFR}{\begin{quotation}\og}{\fg\end{quotation}}
+\begin{citationFR}
+Hinata danse comme un mur
+\end{citationFR}
 \end{document}
